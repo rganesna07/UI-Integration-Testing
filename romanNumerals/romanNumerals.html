@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="romanNumerals.css">
+        <script src="romanNumerals.js" defer></script>
+    </head>
+    <body>
+        <div class="results">
+            <div class="result">
+                <div id="old-roman-result"></div>
+                "Old" Roman Numeral
+            </div>
+            <div class="result">
+                <div id="modern-roman-result"></div>
+                "Modern" Roman Numeral
+            </div>
+        </div>
+        <form id="arabic-number-form">
+            <label>
+                Arabic number (1-3999)
+                <input type="number" min="1" max="3999" id="arabic-number" name="arabic-number" />
+            </label>
+            <button>Convert to "modern" Roman</button>
+        </form>
+    </body>
+</html>

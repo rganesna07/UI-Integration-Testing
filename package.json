@@ -1,0 +1,11 @@
+{
+  "name": "assignment-3",
+  "version": "1.0.0",
+  "description": "Ingegration tests for UI-based apps",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
