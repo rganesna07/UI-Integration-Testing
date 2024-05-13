@@ -116,6 +116,27 @@ test("email is invalid because it is empty, but password is valid", async functi
 })
 
 
+test("password is invalid because it is empty, but email is valid", async function(){
+    initDomFromFiles(
+        __dirname + "/registerUser.html",
+        __dirname + "/registerUser.js"
+      )
+    
+    const email = domTesting.getByLabelText(document, "Email")
+    const password = domTesting.getByLabelText(document, "Password")
+    const register = domTesting.getByRole(document, "button")
+
+    const user = userEvent.setup()
+    await user.type(email, "validEmail@gmail.com")
+    await user.type(password, " ")
+    await user.click(register)
+
+    const errorDiv = domTesting.getByRole(document, "alert")
+    expect(errorDiv).toHaveClass("error status")
+    expect(errorDiv).toHaveTextContent("The password you entered is invalid.")
+})
+
+
 test("email passes, but password does not have a number", async function(){
     initDomFromFiles(
         __dirname + "/registerUser.html",
@@ -133,6 +154,7 @@ test("email passes, but password does not have a number", async function(){
 
     const errorDiv = domTesting.getByRole(document, "alert")
     expect(errorDiv).toHaveClass("error status")
+    expect(errorDiv).toHaveTextContent("The password you entered is invalid.")
     expect(errorDiv).toHaveTextContent("Password needs a numeric digit (0-9)")
 })
 
