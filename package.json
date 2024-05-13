@@ -6,6 +6,12 @@
     "test": "jest"
   },
   "devDependencies": {
-    "jest": "^29.7.0"
+    "@testing-library/dom": "^10.1.0",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/user-event": "^14.5.2",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^24.0.0",
+    "msw": "^2.3.0"
   }
 }
