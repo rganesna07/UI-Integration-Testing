@@ -1,7 +1,6 @@
 const form = document.getElementById("add-photo-form")
 const emailInput = document.getElementById("email")
 const passwordInput = document.getElementById("password")
-
 /*
  * Hook up a form submission listener that validate the email and password
  * entered by user, and if they are valid, clears the form and displays a
@@ -43,6 +42,7 @@ function displaySuccess() {
  * This function displays an error message to let the user know how their
  * submitted email address and/or password are invalid.
  */
+
 function displayError(emailValid, passwordValid) {
     const errorDiv = document.createElement("div")
     errorDiv.classList.add("error", "status")

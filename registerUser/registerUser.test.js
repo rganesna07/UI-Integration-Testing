@@ -207,7 +207,7 @@ test("email passes, but password does not have a upper case letter (other reqs a
     expect(errorDiv).toHaveTextContent("Password needs an upper case letter")
 })
 
-test("email passes, but password does not have a numeric digit", async function(){
+test("email passes, but password does not have a numeric digit (other reqs are met though)", async function(){
     initDomFromFiles(
         __dirname + "/registerUser.html",
         __dirname + "/registerUser.js"
@@ -228,7 +228,7 @@ test("email passes, but password does not have a numeric digit", async function(
     expect(errorDiv).toHaveTextContent("Password needs a numeric digit (0-9)")
 })
 
-test("email passes, but password does not have a symbol", async function(){
+test("email passes, but password does not have a symbol (other reqs are met though)", async function(){
     initDomFromFiles(
         __dirname + "/registerUser.html",
         __dirname + "/registerUser.js"
@@ -249,7 +249,7 @@ test("email passes, but password does not have a symbol", async function(){
     expect(errorDiv).toHaveTextContent("Password needs a symbol (!@#$%^&*)")
 })
 
-test("email passes, but password contains an invalid character", async function(){
+test("email passes, but password contains an invalid character (other reqs are met though)", async function(){
     initDomFromFiles(
         __dirname + "/registerUser.html",
         __dirname + "/registerUser.js"
