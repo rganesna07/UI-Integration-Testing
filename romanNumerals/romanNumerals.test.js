@@ -56,7 +56,7 @@ test("old Roman Numeral is converted accurately as user types it in (doesn't cli
     await user.type(inputNum, "438")
 
     const oldNum = await domTesting.findByText(document, '"Old" Roman Numeral')
-     const modernNum = await domTesting.findByText(document, '"Modern" Roman Numeral')
+    const modernNum = await domTesting.findByText(document, '"Modern" Roman Numeral')
 
     expect(oldNum).toHaveTextContent("CCCCXXXVIII")
     expect(modernNum).toHaveTextContent(" ")
